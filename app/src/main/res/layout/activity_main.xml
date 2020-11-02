@@ -1,18 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/dimen_16"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/ic_launcher_round"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/warung_name_text"/>
+        </LinearLayout>
+
+        <!-- Food Menu -->
+        <LinearLayout
+            android:id="@+id/ll_food_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_food_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/food_menu_text" />
+
+            <View
+                android:id="@+id/line_food_one"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/cb_food_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/menu_nasi_goreng"/>
+                <EditText
+                    android:id="@+id/et_food_one"
+                    android:layout_width="@dimen/dimen_32"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_empty"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/cb_food_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/menu_mie_goreng"/>
+                <EditText
+                    android:id="@+id/et_food_two"
+                    android:layout_width="@dimen/dimen_32"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_empty"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/cb_food_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:text="@string/menu_ayam_bakar"/>
+                <EditText
+                    android:id="@+id/et_food_three"
+                    android:layout_width="@dimen/dimen_32"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_empty"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/cb_food_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/menu_ayam_goreng"/>
+                <EditText
+                    android:id="@+id/et_food_four"
+                    android:layout_width="@dimen/dimen_32"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_empty"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Drink Menu -->
+        <LinearLayout
+            android:id="@+id/ll_drink_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_drink_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drink_menu_text" />
+
+            <View
+                android:id="@+id/line_drink_one"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/cb_drink_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/menu_teh"/>
+                <EditText
+                    android:id="@+id/et_drink_one"
+                    android:layout_width="32"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_empty"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/cb_drink_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/menu_air_mineral_250"/>
+                <EditText
+                    android:id="@+id/et_drink_two"
+                    android:layout_width="@dimen/dimen_32"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_empty"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/cb_drink_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/menu_air_mineral_600"/>
+                <EditText
+                    android:id="@+id/et_drink_three"
+                    android:layout_width="@dimen/dimen_32"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_empty"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/cb_drink_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/menu_air_jeruk"/>
+                <EditText
+                    android:id="@+id/et_drink_four"
+                    android:layout_width="@dimen/dimen_32"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_empty"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate_text"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/food_total_text"/>
+                <TextView
+                    android:id="@+id/tv_food_total"
+                    android:layout_width="@dimen/dimen_32"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/hint_empty"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/drink_total_text"/>
+                <TextView
+                    android:id="@+id/tv_drink_total"
+                    android:layout_width="@dimen/dimen_32"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/hint_empty"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/total_text"/>
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="@dimen/dimen_32"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/hint_empty"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/pay_total"/>
+                <TextView
+                    android:id="@+id/tv_pay_total"
+                    android:layout_width="@dimen/dimen_32"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/hint_empty"/>
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/pay_text"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>
