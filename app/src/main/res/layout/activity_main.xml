@@ -62,7 +62,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
                     style="@style/yellow_cb"
-                    android:onClick="checkEnabledET"
                     android:text="@string/menu_nasi_goreng"/>
                 <EditText
                     android:id="@+id/et_food_one"

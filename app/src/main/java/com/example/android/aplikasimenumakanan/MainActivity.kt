@@ -7,6 +7,7 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var listFoodChecked: Map<CheckBox, Int>
@@ -156,11 +157,17 @@ class MainActivity : AppCompatActivity() {
             cb_food_three to et_food_three,
             cb_food_four to et_food_four,
             cb_drink_one to et_drink_one,
-            cb_drink_two to et_food_two,
-            cb_food_three to et_food_three,
-            cb_food_four to et_food_four
+            cb_drink_two to et_drink_two,
+            cb_drink_three to et_drink_three,
+            cb_drink_four to et_drink_four
         )
 
-
+        for ((cb, et) in listMatchEditText){
+            if(cb.isChecked){
+                et.visibility = View.VISIBLE
+            } else if (!cb.isChecked) {
+                et.visibility = View.INVISIBLE
+            }
+        }
     }
 }
