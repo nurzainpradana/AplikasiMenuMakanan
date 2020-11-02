@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/dimen_16"
+    android:background="@color/cream"
     tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            tools:ignore="UseCompoundDrawables">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -34,6 +36,7 @@
             android:id="@+id/ll_food_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12"
             android:orientation="vertical">
 
             <TextView
@@ -59,6 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
                     style="@style/yellow_cb"
+                    android:onClick="checkEnabledET"
                     android:text="@string/menu_nasi_goreng"/>
                 <EditText
                     android:id="@+id/et_food_one"
@@ -131,6 +135,7 @@
             android:id="@+id/ll_drink_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12"
             android:orientation="vertical">
 
             <TextView
@@ -228,11 +233,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/calculate_text"
+            android:onClick="calculateNow"
             android:layout_gravity="center"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -248,29 +255,35 @@
                     android:id="@+id/tv_food_total"
                     android:layout_width="@dimen/dimen_100"
                     android:layout_height="wrap_content"
-                    style="@style/body_text"
+                    style="@style/gray_et"
+                    android:hint="@string/hint_empty"
                     tools:text="@string/hint_empty"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dimen_8">
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="6"
                     style="@style/body_text"
-                    android:text="@string/drink_total_text"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7"
+                    android:text="@string/drink_total_text" />
+
                 <TextView
                     android:id="@+id/tv_drink_total"
+                    style="@style/gray_et"
                     android:layout_width="@dimen/dimen_100"
                     android:layout_height="wrap_content"
-                    style="@style/body_text"
-                    tools:text="@string/hint_empty"/>
+                    android:hint="@string/hint_empty"
+                    tools:text="@string/hint_empty" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -282,12 +295,14 @@
                     android:id="@+id/tv_total"
                     android:layout_width="@dimen/dimen_100"
                     android:layout_height="wrap_content"
-                    style="@style/body_text.bold"
+                    style="@style/gray_et"
+                    android:hint="@string/hint_empty"
                     tools:text="@string/hint_empty"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -296,16 +311,18 @@
                     style="@style/body_text"
                     android:text="@string/pay_total"/>
                 <EditText
-                    android:id="@+id/tv_pay_total"
+                    android:id="@+id/et_total_pay"
                     android:layout_width="@dimen/dimen_100"
                     android:layout_height="wrap_content"
                     style="@style/maroon_et"
+                    android:hint="@string/hint_empty"
                     tools:text="@string/hint_empty"/>
             </LinearLayout>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:onClick="payNow"
                 android:text="@string/pay_text"/>
         </LinearLayout>
     </LinearLayout>

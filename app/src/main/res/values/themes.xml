@@ -40,8 +40,15 @@
         <item name="android:buttonTintMode" tools:targetApi="lollipop">src_atop</item>
     </style>
 
-    <style name="maroon_et">
+    <style name="maroon_et" parent="body_text">
         <item name="android:background">@drawable/et_maroon</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/maroon</item>
+        <item name="android:inputType">numberDecimal</item>
+    </style>
+
+    <style name="gray_et" parent="body_text">
+        <item name="android:background">@drawable/et_gray</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textColor">@color/maroon</item>
     </style>
