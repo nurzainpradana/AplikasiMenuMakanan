@@ -20,9 +20,12 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@mipmap/ic_launcher_round"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/lobster"
+                style="@style/header_text.app_name"
                 android:text="@string/warung_name_text"/>
         </LinearLayout>
 
@@ -37,6 +40,7 @@
                 android:id="@+id/tv_food_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/header_text"
                 android:text="@string/food_menu_text" />
 
             <View
@@ -54,11 +58,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
+                    style="@style/yellow_cb"
                     android:text="@string/menu_nasi_goreng"/>
                 <EditText
                     android:id="@+id/et_food_one"
                     android:layout_width="@dimen/dimen_32"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dimen_32"
+                    style="@style/maroon_et"
                     android:hint="@string/hint_empty"/>
             </LinearLayout>
 
@@ -71,11 +77,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
+                    style="@style/yellow_cb"
                     android:text="@string/menu_mie_goreng"/>
                 <EditText
                     android:id="@+id/et_food_two"
                     android:layout_width="@dimen/dimen_32"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dimen_32"
+                    style="@style/maroon_et"
                     android:hint="@string/hint_empty"/>
             </LinearLayout>
 
@@ -87,12 +95,14 @@
                     android:id="@+id/cb_food_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="7"
+                    android:layout_weight="8"
+                    style="@style/yellow_cb"
                     android:text="@string/menu_ayam_bakar"/>
                 <EditText
                     android:id="@+id/et_food_three"
                     android:layout_width="@dimen/dimen_32"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dimen_32"
+                    style="@style/maroon_et"
                     android:hint="@string/hint_empty"/>
             </LinearLayout>
 
@@ -105,11 +115,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
+                    style="@style/yellow_cb"
                     android:text="@string/menu_ayam_goreng"/>
                 <EditText
                     android:id="@+id/et_food_four"
                     android:layout_width="@dimen/dimen_32"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dimen_32"
+                    style="@style/maroon_et"
                     android:hint="@string/hint_empty"/>
             </LinearLayout>
         </LinearLayout>
@@ -125,6 +137,7 @@
                 android:id="@+id/tv_drink_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/header_text"
                 android:text="@string/drink_menu_text" />
 
             <View
@@ -142,11 +155,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
+                    style="@style/yellow_cb"
                     android:text="@string/menu_teh"/>
                 <EditText
                     android:id="@+id/et_drink_one"
                     android:layout_width="@dimen/dimen_32"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dimen_32"
+                    style="@style/maroon_et"
                     android:hint="@string/hint_empty"/>
             </LinearLayout>
 
@@ -159,11 +174,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
+                    style="@style/yellow_cb"
                     android:text="@string/menu_air_mineral_250"/>
                 <EditText
                     android:id="@+id/et_drink_two"
                     android:layout_width="@dimen/dimen_32"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dimen_32"
+                    style="@style/maroon_et"
                     android:hint="@string/hint_empty"/>
             </LinearLayout>
 
@@ -176,11 +193,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
+                    style="@style/yellow_cb"
                     android:text="@string/menu_air_mineral_600"/>
                 <EditText
                     android:id="@+id/et_drink_three"
                     android:layout_width="@dimen/dimen_32"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dimen_32"
+                    style="@style/maroon_et"
                     android:hint="@string/hint_empty"/>
             </LinearLayout>
 
@@ -193,16 +212,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
+                    style="@style/yellow_cb"
                     android:text="@string/menu_air_jeruk"/>
                 <EditText
                     android:id="@+id/et_drink_four"
                     android:layout_width="@dimen/dimen_32"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dimen_32"
+                    style="@style/maroon_et"
                     android:hint="@string/hint_empty"/>
             </LinearLayout>
         </LinearLayout>
 
         <Button
+            android:id="@+id/btn_calculate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/calculate_text"
@@ -219,12 +241,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="8"
+                    android:layout_weight="6"
+                    style="@style/body_text"
                     android:text="@string/food_total_text"/>
                 <TextView
                     android:id="@+id/tv_food_total"
-                    android:layout_width="@dimen/dimen_32"
+                    android:layout_width="@dimen/dimen_100"
                     android:layout_height="wrap_content"
+                    style="@style/body_text"
                     tools:text="@string/hint_empty"/>
             </LinearLayout>
             <LinearLayout
@@ -234,12 +258,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="8"
+                    android:layout_weight="6"
+                    style="@style/body_text"
                     android:text="@string/drink_total_text"/>
                 <TextView
                     android:id="@+id/tv_drink_total"
-                    android:layout_width="@dimen/dimen_32"
+                    android:layout_width="@dimen/dimen_100"
                     android:layout_height="wrap_content"
+                    style="@style/body_text"
                     tools:text="@string/hint_empty"/>
             </LinearLayout>
             <LinearLayout
@@ -250,11 +276,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
+                    style="@style/body_text.bold"
                     android:text="@string/total_text"/>
                 <TextView
                     android:id="@+id/tv_total"
-                    android:layout_width="@dimen/dimen_32"
+                    android:layout_width="@dimen/dimen_100"
                     android:layout_height="wrap_content"
+                    style="@style/body_text.bold"
                     tools:text="@string/hint_empty"/>
             </LinearLayout>
             <LinearLayout
@@ -265,11 +293,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
+                    style="@style/body_text"
                     android:text="@string/pay_total"/>
-                <TextView
+                <EditText
                     android:id="@+id/tv_pay_total"
-                    android:layout_width="@dimen/dimen_32"
+                    android:layout_width="@dimen/dimen_100"
                     android:layout_height="wrap_content"
+                    style="@style/maroon_et"
                     tools:text="@string/hint_empty"/>
             </LinearLayout>
             <Button
