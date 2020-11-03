@@ -2,6 +2,7 @@ package com.example.android.aplikasimenumakanan
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import android.widget.CheckBox
 import android.widget.EditText
@@ -138,36 +139,27 @@ class MainActivity : AppCompatActivity() {
                 var total_pay = et_total_pay.text.toString().toInt()
                 if (total_pay > total){
                     total_pay -= total
-                    Toast.makeText(this, "Kembalian anda $total_pay", Toast.LENGTH_SHORT).show()
+                    val makeText = Toast.makeText(this, "Kembalian anda $total_pay", Toast.LENGTH_SHORT)
+                    makeText.setGravity(Gravity.TOP, 0, 0)
+                    makeText.show()
+                } else if (total_pay == total){
+                    val makeText = Toast.makeText(this, "Terimakasih Sudah Berbelanja", Toast.LENGTH_SHORT)
+                    makeText.setGravity(Gravity.TOP, 0, 0)
+                    makeText.show()
                 } else {
-                    Toast.makeText(this, "Maaf, Uang Anda Tidak Cukup", Toast.LENGTH_SHORT).show()
+                    val makeText = Toast.makeText(this, "Maaf, Uang Anda Tidak Cukup", Toast.LENGTH_SHORT)
+                    makeText.setGravity(Gravity.TOP, 0, 0)
+                    makeText.show()
                 }
             } else {
-                Toast.makeText(this, "Anda Belum Memasukkan Nominal", Toast.LENGTH_SHORT).show()
+                val makeText = Toast.makeText(this, "Anda Belum Memasukkan Nominal", Toast.LENGTH_SHORT)
+                makeText.setGravity(Gravity.TOP, 0, 0)
+                makeText.show()
             }
         } else {
-            Toast.makeText(this, "Anda Belum Memilih Menu", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    fun checkEnabledET(view: View) {
-        var listMatchEditText: Map<CheckBox, EditText> = mapOf(
-            cb_food_one to et_food_one,
-            cb_food_two to et_food_two,
-            cb_food_three to et_food_three,
-            cb_food_four to et_food_four,
-            cb_drink_one to et_drink_one,
-            cb_drink_two to et_drink_two,
-            cb_drink_three to et_drink_three,
-            cb_drink_four to et_drink_four
-        )
-
-        for ((cb, et) in listMatchEditText){
-            if(cb.isChecked){
-                et.visibility = View.VISIBLE
-            } else if (!cb.isChecked) {
-                et.visibility = View.INVISIBLE
-            }
+            val makeText = Toast.makeText(this, "Anda Belum Memilih Menu", Toast.LENGTH_SHORT)
+            makeText.setGravity(Gravity.TOP, 0, 0)
+            makeText.show()
         }
     }
 }
