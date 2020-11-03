@@ -9,14 +9,15 @@ import android.widget.EditText
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
+import java.text.NumberFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var listFoodChecked: Map<CheckBox, Int>
     lateinit var listDrinkChecked: Map<CheckBox, Int>
 
-    /* var localeId = Locale("id", "ID")
+    var localeId = Locale("id", "ID")
     var formatRupiah: NumberFormat = NumberFormat.getCurrencyInstance(localeId)
-     */
 
     var totalFood: Int = 0
     var totalDrink: Int = 0
@@ -34,9 +35,9 @@ class MainActivity : AppCompatActivity() {
         getSelectedFood()
         getSelectedDrink()
 
-        tv_food_total.text = totalFood.toString()
-        tv_drink_total.text = totalDrink.toString()
-        tv_total.text = total.toString()
+        tv_food_total.text = formatRupiah.format(totalFood)
+        tv_drink_total.text = formatRupiah.format(totalDrink)
+        tv_total.text = formatRupiah.format(total)
     }
 
     private fun getSelectedFood() {
@@ -139,13 +140,7 @@ class MainActivity : AppCompatActivity() {
                 var total_pay = et_total_pay.text.toString().toInt()
                 if (total_pay > total){
                     total_pay -= total
-                    val makeText = Toast.makeText(this, "Kembalian anda $total_pay", Toast.LENGTH_SHORT)
-                    makeText.setGravity(Gravity.TOP, 0, 0)
-                    makeText.show()
-                } else if (total_pay == total){
-                    val makeText = Toast.makeText(this, "Terimakasih Sudah Berbelanja", Toast.LENGTH_SHORT)
-                    makeText.setGravity(Gravity.TOP, 0, 0)
-                    makeText.show()
+                    Toast.makeText(this, "Kembalian anda ${formatRupiah.format(total_pay)}", Toast.LENGTH_SHORT).show()
                 } else {
                     val makeText = Toast.makeText(this, "Maaf, Uang Anda Tidak Cukup", Toast.LENGTH_SHORT)
                     makeText.setGravity(Gravity.TOP, 0, 0)
